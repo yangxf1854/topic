@@ -108,3 +108,14 @@ npm i axios -S
 npm i memory-fs -D
 ###安装http-proxy-middleware
 npm i http-proxy-middleware -D
+
+
+###代码规范，安装eslint和editorconfig
+eslint:在根目录新建文件.eslintrc
+npm i eslint -D
+
+###然后再在client文件夹下新建.eslintrc,因为在client文件下是用jsx语法写的，语法和js不一样，所以要单独建一个
+注意："extends": "airbnb",和"extends": "stardand"也要安装相应的包
+修改eslint-loader配置，eslint-loader要在编译之前执行
+
+
