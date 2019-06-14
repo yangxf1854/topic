@@ -14,15 +14,16 @@ const config = {
     path: path.join(__dirname, '../dist'),
     publicPath: '/public/' // /public/app.hash.js
   },
+  resolve: {
+    extensions: ['.js', '.jsx'] // 自动解析确定的扩展。
+  },
   module: {
     rules: [
       {
-        enforec: 'pre', // 编译前检查
-        test: /\.(jsx|js)$/,
-        loader: 'eslint-loader',
-        exclude: [ // 不检查的文件
-          path.resolve(__dirname, '../node_modules')
-        ]
+        enforce: 'pre',
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader'
       },
       {
         test: /\.(jsx)$/,

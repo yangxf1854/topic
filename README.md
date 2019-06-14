@@ -116,6 +116,33 @@ npm i eslint -D
 
 ###然后再在client文件夹下新建.eslintrc,因为在client文件下是用jsx语法写的，语法和js不一样，所以要单独建一个
 注意："extends": "airbnb",和"extends": "stardand"也要安装相应的包
+安装eslint-config-airbnb后会提示你安装一系列的plugin,否则无法使用eslint-config-airbnb
 修改eslint-loader配置，eslint-loader要在编译之前执行
 
+
+###项目架构
+新建views文件夹，放所有的页面文件
+新建config文件夹，新建一些配置文件和第三方的库
+新建store文件，存放一些数据封装
+新建components,非业务组件
+目录结构
+topic
+  |__build
+     |__webpack.config.client.js
+     |__webpack.config.server.js
+  |__client
+     |__components
+     |__config
+        |__router.jsx
+     |__store
+        |__store.js
+     |__views
+        |__App.jsx
+  |__server
+  |__.babelrc
+  |__.eslintrc
+
+###路由配置
+安装react-router, react-reouter-dom
+npm i react-router react-router-dom -D
 
