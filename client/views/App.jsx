@@ -2,7 +2,9 @@ import React from 'react';
 import {
   Link
 } from 'react-router-dom';
-import Routes from '../config/router'; // 路由配置
+import Routes from '../config/router.jsx';
+
+console.log(Routes, 'Routes');
 
 class App extends React.Component {
   componentDidMount() {
@@ -11,12 +13,12 @@ class App extends React.Component {
 
   render() {
     return [
-      <div>
+      <div key="banner">
         <Link to="/">首页</Link>
         <br />
         <Link to="/detail">详情页</Link>
       </div>,
-      <Routes />
+      <Routes key="routes" />
     ];
   }
 }

@@ -64,6 +64,9 @@ if (isDev) {
     publicPath: '/public', // 所有我们访问的静态文件前面都加public
     historyApiFallback: { // 保证我们访问的html是public/index.html
       index: '/public/index.html'
+    },
+    proxy: {
+      'api': 'http://localhost:3333'
     }
   }
   config.plugins.push(new webpack.HotModuleReplacementPlugin())
